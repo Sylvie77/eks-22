@@ -53,13 +53,13 @@ eksctl utils associate-iam-oidc-provider \
 eksctl create nodegroup --cluster=myeks \
                         --region=us-east-1 \
                         --name=myeks-ng-public1 \
-                        --node-type=t3.medium \
-                        --nodes=3 \
-                        --nodes-min=3 \
+                        --node-type=t2.medium \
+                        --nodes=2 \
+                        --nodes-min=2 \
                         --nodes-max=14 \
                         --node-volume-size=20 \
                         --ssh-access \
-                        --ssh-public-key=key.nv \
+                        --ssh-public-key=eka \
                         --managed \
                         --asg-access \
                         --external-dns-access \
